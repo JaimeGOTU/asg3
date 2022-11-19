@@ -1,0 +1,70 @@
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+
+<!--jumbotron copied from bootstrap 4.0-->
+<main>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <br>
+      <h5 class="display-9">Welcome to the <%= title %> page!</h5>
+      <br>
+
+    </div>
+  </div>
+
+<!--depending on the site it changes the content, and pulls elements from partial-->
+<% if(title == "Home Page"){%>
+  <%- include partials/HomePage.ejs %>
+<%} else { %>
+<% } %>
+
+<% if(title == "About Me"){%>
+  <%- include partials/About_Me.ejs %>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<%} else { %>
+<% } %>
+
+<% if(title == "Projects"){%>
+  <%- include partials/Projects.ejs %>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<%} else { %>
+<% } %>
+
+<% if(title == "Contact Me"){%>
+  <%- include partials/Contact_Me.ejs %>
+<%} else { %>
+<% } %>
+
+</main>
+<%- include partials/bottom_nav.ejs %>
+<%- include partials/footer.ejs %>

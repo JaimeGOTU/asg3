@@ -1,0 +1,81 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<!--the things that go in the add page-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <h1><%=title %></h1>
+            <form class="form" method="post">
+
+                <!--game title field-->
+                <div class="form-group">
+                    <label for="titleTextField">Game Title</label>
+                    <input type="text" 
+                        class="form-control" 
+                        id="titleTextField" 
+                        placeholder="Enter Game Title" 
+                        name="title" 
+                        required>
+                </div>
+                <!--completed (y/n) field-->
+                <div class="form-group">
+                    <label for="completedTextField">Completed</label>
+                    <input type="text" 
+                        class="form-control" 
+                        id="completedTextField" 
+                        placeholder="Did you complete the game? (Y/N)" 
+                        name="completed" 
+                        required>
+                </div>
+                <!--game title field-->
+                <div class="form-group">
+                    <label for="hoursTextField">Hours Spent</label>
+                    <input type="text" 
+                        class="form-control" 
+                        id="hoursTextField" 
+                        placeholder="Enter amount of hours played" 
+                        name="hours" 
+                        required>
+                </div>
+                <!--comments field-->
+                <div class="form-group">
+                    <label for="commentsTextField">Comments</label>
+                    <textarea type="text" 
+                        class="form-control" 
+                        id="commentsTextField" 
+                        placeholder="Describe the game briefly" 
+                        name="comments" 
+                        required></textarea>
+                </div>
+                <!--rating field-->
+                <div class="form-group">
+                    <label for="ratingTextField">Rating</label>
+                    <input type="text" 
+                        class="form-control" 
+                        id="ratingTextField"
+                        placeholder="Enter Rating" 
+                        name="rating" 
+                        required>
+                </div>
+
+                <!--separation and then we have the buttons for edit and delete-->
+                <br>
+
+                <button class="btn-btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit
+                </button>
+
+                <a href="/game-list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i>Cancel</a>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>

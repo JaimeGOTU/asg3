@@ -1,0 +1,76 @@
+<body>
+  <!-- nav bar copied from bootstrap-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!--nav bar-->
+  <div class="container-fluid">
+    <!--brand, which shows up in on the top left-->
+    <a class="navbar-brand" href="/">MyGameList</a>
+
+     <!--this button makes for a responsive page-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" d
+            ata-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--contains all my navigation items-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <!--automatically adjusting margins of navbar-->
+                <!--ms-auto in version 5-->
+
+        <!--home / welcome page -->
+        <li class="nav-item">
+        <% if(title == "Home Page"){%>
+          <a class="nav-link active" aria-current="page" href="/home">
+        <%} else { %>
+          <a class="nav-link" aria-current="page" href="/home">
+        <% } %>
+        <i class="fa-solid fa-igloo"></i> Home</a>
+        </li> <!--only keep "active" for the homepage", it seems it's the "highlight" though--> 
+
+        <!--Register Games with CRUD -->
+        <li class="nav-item">
+        <% if(title == "Games"){%>
+          <a class="nav-link active" aria-current="page" href="/game-list">
+          <%} else { %>
+          <a class="nav-link" aria-current="page" href="/game-list">
+          <% } %>
+          <i class="fa-solid fa-gamepad"></i> Games </a>
+        </li>
+
+        <!-- About Me -->
+        <li class="nav-item">
+        <% if(title == "About Me"){%>
+          <a class="nav-link active" aria-current="page" href="/about">
+        <%} else { %>
+          <a class="nav-link" aria-current="page" href="/about">
+        <% } %>
+          <i class="fa-solid fa-magnifying-glass"></i> About Me</a>
+          <!--fontawesome icon-->
+          <!-- fa-lg to make it large or xtimes number(?)--><!-- on the site other variations-->
+        </li>
+
+        <!-- Past Projects for the asgn2 requirements -->
+        <li class="nav-item">
+        <% if(title == "Projects"){%>
+          <a class="nav-link active" aria-current="page" href="/projects">
+          <%} else { %>
+          <a class="nav-link" aria-current="page" href="/projects">
+                        <!-- aria-current shouldnt matter for now apparently-->
+          <% } %>
+          <i class="fa-solid fa-file"></i> Other Projects </a>
+        </li>
+
+        <!-- Contact Us -->
+        <li class="nav-item">
+        <% if(title == "Contact Me"){%>
+          <a class="nav-link active" aria-current="page" href="/contactme">
+          <%} else { %>
+          <a class="nav-link" aria-current="page" href="/contactme">
+          <% } %>
+          <i class="fa-regular fa-comment"></i> Contact Me </a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>

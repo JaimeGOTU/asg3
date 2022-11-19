@@ -1,0 +1,48 @@
+<!--heavily inspired in assignment 1, to fullfil the requirements of assignment 2-->
+<div id="wrapper">
+            <!--Necessary to make the "Contact Me" form or any other form-->
+            <form id="form">
+            <p>Feel free to request features or ask for information!</p>
+                <!--Labels to indicate the user what to input-->
+                <label for="name">Name</label>
+                <br>
+                <!--The input itself, with placeholders as examples-->
+                <input type="text" name="name" id="name" size="35" placeholder="John Smith" required>
+
+                <p></p>
+
+                <label for="email">E-mail</label>
+                <br>
+                <!--same as above, but with type email, so a valid input is necessary-->
+                <input type="email" name="email" id="email" size="35" placeholder="CoolEmail@gmail.com" required>
+
+                <p></p>
+
+                <label for="inquiry">Type of Inquiry</label>
+                <br>
+                <!--List of options regarding the Type of Inquiry-->
+                <input list="list" name="inquiry" id="inquiry" required size="35">
+                    <datalist id="list">
+                        <option value="Job Offer"></option>
+                        <option value="Interview Request"></option>
+                        <option value="General Inquiry"></option>
+                        <option value="Other"></option>
+                    </datalist>
+
+                <p></p>
+                <!--For the user to write what the inquiry is about in a text area-->
+                <label for="additional_info">About the Inquiry</label>
+                <br>
+                <textarea name="additional_info" id="additional_info" cols="35" rows="4" required></textarea>
+
+                <p></p>
+                <!--To submit the info and supposedly send it to me-->
+                <input type="submit" value="Send"/>
+                <br>
+                <br>
+                <br>
+                <br>
+                
+
+            </form>
+        </div>

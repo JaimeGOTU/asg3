@@ -1,0 +1,60 @@
+/*CSS file for the project
+HEAVILY inspired by the .css file(s) used in my assignment 1
+*/
+
+main {
+    background-color: beige;
+}
+
+body{
+    background-color: beige;
+}
+
+.container{
+    background-color: beige;
+    float: center;
+}
+
+#wrapper{
+    background-color: beige;
+    display: flex;
+    align-items: center;
+    margin-left: 15%;
+
+}
+
+#right_side{
+    float:right;
+    width: 25%;
+    margin-top: 75px;
+    margin-left: 50px;
+    transform: scale(1.75);
+    background-color: beige;
+}
+
+article{
+    background-color: beige;
+    margin-top: 30px;
+    margin-left: 50px;
+    float: left;
+
+}
+
+#wrapper_about_me{
+    background-color: beige;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+video{
+    width: 320px;
+    height: 180px;
+    padding: 15px;
+    background-color:black;
+    border:2px white solid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-left: 35px;
+}

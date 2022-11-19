@@ -1,0 +1,75 @@
+<!--wouldnt it be better to have game.ejs be a partial instead though?-->
+
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<main class="container">
+    <div class ="row">
+        <!-- the col-md-number has to correspond to your total amount of columns later-->
+        <div class="col-md-offset-3 col-md-16">
+            <h3>List of <%= title %><h3>
+            <!--button to redirect to the add view-->
+            <a href='/game-list/add' class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle"></i> Add Game</a>
+            <br>
+            <br>
+
+        <!--table-->
+        <table class= "table table-bordered table-striped table-hover">
+        <!--table row-->
+        <tr>
+        <!--table header-->
+            <th class="text-center col-2">Title</th>
+            <th class="text-center col-2">Completed (Y/N)</th>
+            <th class="text-center col-1">Hours</th>
+            <th class="text-center col-5">Comments</th>
+            <th class="text-center col-2">Rating (x/10)</th>
+            <!--buttons to edit and delete-->
+            <th class="text-center col-2"></th>
+            <th class="text-center col-2"></th>
+        </tr>
+
+        <!-- repeat the template -->
+        <% for(let count=0; count < Gamelist.length; count++){ %>
+            <!-- tr class="d-flex" didnt really work for me-->
+            <tr>
+                <!--add table data-->
+                <td class="text-center col-2"><%= Gamelist[count].title %></td>
+                <td class="text-center col-2"><%= Gamelist[count].completed %></td>
+                <td class="text-center col-1"><%= Gamelist[count].hours %></td>
+                <td class="text-center col-5"><%= Gamelist[count].comments %></td>
+                <td class="text-center col-1"><%= Gamelist[count].rating %></td>
+
+                <!-- button to edit a game in the table-->
+                <td class="text-center col-1">
+                    <a href="/game-list/edit/<%= Gamelist[count]._id %>"
+                    class ="btn btn-primary">
+                    <i class="fas fa-pencil-alt"></i> Edit</a>
+                </td>
+
+                <!-- button to delete a game in the table-->
+                <td class="text-center col-1">
+                    <a href="/game-list/delete/<%= Gamelist[count]._id %>"
+                    class ="btn btn-danger">
+                    <i class="fas fa-trash-alt"></i> Delete</a>
+                </td>
+
+            </tr>
+
+        <%} %> 
+
+        </table>
+        </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+</main>
+
+<!-- as you can see this one is called here, in order-->
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>

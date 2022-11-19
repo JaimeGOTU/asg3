@@ -1,0 +1,64 @@
+This is a site that combines the ideas for 
+Assignment 2 and Assignment 3
+
+Essentially, it's a site in which you can add to the table a list of 
+
+Site Idea:
+Have a full library of games one has completed.
+Using CRUD one can modify the data as they play more of a game,
+finish it, change their opiniong, and add more as they play more.
+Of course, in the case of a mistake, they can delete, although the site
+asks "are you sure?" before that.
+
+This site also combines what is essentially part of assignment 1 and 2.
+About Me being a sort of "about us", explaining who created the site,
+and in other projects, ideally, i'd advertise my other sites / projects...
+if i had any, which in this case, i just copied the original CV Page
+
+Contact Me could be used for feedback, feature requests, or general comments.
+Regardless of the page, I think it's a great feature to have.
+
+Of course, following assingment 2, the routing is done using express
+And for assignment 3, the table is in mongoDB and can be accessed with CRUD
+
+How to improve the site:
+    - frankly, the css and design is kinda messy. It looks good on my end
+ but i fear it may not look good in other devices.
+    - On the edit and add pages the Y/N should be a radio button
+    - Use a different bootstrap design as the one used in the videos in class
+    as it would make my site stand out more, and be more original / creative
+    (however, i fear how the code may break/change on an environment with limited time)
+
+    *the following are suggestions with a caviat, explained later:
+    - The number of hours on the table should be an actual number
+    - The rating should be an actual number on the table
+    - The rating on the add and edit page should be a list of selections
+    from 0-10 (with maybe an 11 added for MASTERPIECE)
+
+*Regarding the numbers however, I feel like leaving it as strings is more
+convenient and leaves room for creativity. So the user could rate a game
+MASTERPIECE/10, or put the amount of hours they've spent in a game as "too many"
+or "not nearly enough", which I think is a really cool feature, specially if
+you're going to show your friends.
+
+Up next is a small draft I had going in:
+
+Concept inspired by this site:
+https://myanimelist.net/
+in which one can mark the animes they've watched, the rating, and other things
+
+NAV BAR:
+Home / Welcome Page - Make your friends jealous, get neat stats or relive memories
+Register Games - CRUD
+About Us / Inspired by - quick MAL reference
+Past Projects - Straight from assignment 1 as part of my assignment 2 requirements
+Contact Us - Form
+
+FOOTER:
+Socials of the creator (?)
+Else:
+Done as a studying project, not infringing copyright (?)
+
+Information on table of games
+
+TITLE | COMPLETED (yes/no) | Hours Spent on it | Comments | Rating (1-10) 
