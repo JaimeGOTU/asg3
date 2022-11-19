@@ -1,6 +1,6 @@
 module.exports = 
 {
-    "URI": "mongodb://localhost/Assignment-3"
+    "URI":"mongodb+srv://AnyUser1:4ua5XtGA5N9Y5evA@mongodbserver.c4src0z.mongodb.net/Assignment-3"
 }
 //Connection to the folder where our collection / database is
 //Currently pointing to my local DB database, should point to a connected one
